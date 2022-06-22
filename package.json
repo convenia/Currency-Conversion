@@ -1,0 +1,36 @@
+{
+  "name": "gql-currency-conversion",
+  "version": "1.0.0",
+  "description": "GraphQL service for currency conversion",
+  "main": "src/index.js",
+  "author": "Convenia",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "serve": "node --es-module-specifier-resolution=node src/index.js",
+    "test": "mocha --es-module-specifier-resolution=node --loader=testdouble --timeout 60000 --require ./test/bootstrap.js ./test/specs/**/*.spec.js"
+  },
+  "dependencies": {
+    "axios": "0.27.2",
+    "fastify": "4.1.0",
+    "mercurius": "10.0.0"
+  },
+  "devDependencies": {
+    "axios-mock-adapter": "^1.21.1",
+    "chai": "^4.3.6",
+    "eslint": "^8.18.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-chai-friendly": "^0.7.2",
+    "eslint-plugin-import": "^2.26.0",
+    "mocha": "^10.0.0",
+    "supertest": "^6.2.3",
+    "testdouble": "^3.16.6"
+  },
+  "engines": {
+    "node": "^16.15.0"
+  },
+  "imports": {
+    "#src/*": "./src/*",
+    "#test:modules/*": "./test/modules/*"
+  }
+}
