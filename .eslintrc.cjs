@@ -102,6 +102,10 @@ module.exports = {
     // desabilita a obrigatoriedade de incluir a extensão dos arquivos sendo importados
     'import/extensions': 'off',
 
+    'import/no-named-as-default': 'off',
+
+    'import/no-named-as-default-member': 'off',
+
     // habilita regras de espaçamento de elementos de array
     'array-bracket-spacing': [ 'error', 'always' ],
 

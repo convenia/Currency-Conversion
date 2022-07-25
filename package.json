@@ -8,21 +8,28 @@
   "type": "module",
   "scripts": {
     "serve": "node --es-module-specifier-resolution=node src/index.js",
-    "test": "mocha --es-module-specifier-resolution=node --loader=testdouble --timeout 60000 --require ./test/bootstrap.js ./test/specs/**/*.spec.js"
+    "upgrade-fallback:currency-conversion": "node --es-module-specifier-resolution=node src/services/commands/fallback/CurrencyConversion.js",
+    "test:integration": "mocha --es-module-specifier-resolution=node --loader=testdouble --timeout 60000 --require ./test/bootstrap.js ./test/specs/**/*.spec.js"
   },
   "dependencies": {
-    "axios": "0.27.2",
+    "axios": "0.21.0",
+    "currency-symbol-map": "^5.1.0",
     "fastify": "4.1.0",
-    "mercurius": "10.0.0"
+    "graphiql": "^1.9.13",
+    "graphql": "^16.5.0",
+    "mercurius": "10.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "axios-mock-adapter": "^1.21.1",
     "chai": "^4.3.6",
     "eslint": "^8.18.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-chai-friendly": "^0.7.2",
     "eslint-plugin-import": "^2.26.0",
+    "fs-extra": "^10.1.0",
     "mocha": "^10.0.0",
+    "nock": "^13.2.7",
     "supertest": "^6.2.3",
     "testdouble": "^3.16.6"
   },
@@ -31,6 +38,12 @@
   },
   "imports": {
     "#src/*": "./src/*",
-    "#test:modules/*": "./test/modules/*"
+    "#graphql": "./src/graphql",
+    "#content/*": "./src/content/*",
+    "#graphql/*": "./src/graphql/*",
+    "#services/*": "./src/services/*",
+    "#fallback/*": "./fallback/*",
+    "#test:modules/*": "./test/modules/*",
+    "#test:graphql/*": "./test/graphql/*"
   }
 }
