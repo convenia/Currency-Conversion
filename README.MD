@@ -23,7 +23,7 @@
 - `http://localhost:<port>/graphql` - Rota da API GraphQL
 - `http://localhost:<port>/graphiql` - IDE para ler documentação e executar a API GraphQL
 
-## GraphQL Schema
+## **GraphQL Schema**
 
 ```
 type Query {
@@ -43,7 +43,6 @@ type CurrencyInfo {
   symbol: String
 }
 
-"""Currency conversion info with rate, timestamp and the info of the used currency"""
 """Informações de conversão de moeda com sua taxa, timestamp e detalhes da moeda"""
 type ConversionInfo {
   rate: Float
@@ -52,7 +51,7 @@ type ConversionInfo {
 }
 ```
 
-## Lista de Códigos de Moeda
+## **Lista de Códigos de Moeda**
 [Códigos](currency-codes.md)
 
 Obs: nem todas combinações dos códigos funcionam, mas as mais importantes (BRL, USD e EUR) trazem
