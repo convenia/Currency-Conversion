@@ -4,7 +4,7 @@ import { schema } from '#graphql'
 
 export default async (app, port) => {
   try {
-    app.register(cors, { origin: true })
+    await app.register(cors, { origin: true })
 
     app.register(mercurius, {
       schema,
