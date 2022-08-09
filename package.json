@@ -12,6 +12,7 @@
     "test:integration": "mocha --es-module-specifier-resolution=node --loader=testdouble --timeout 60000 --require ./test/bootstrap.js ./test/specs/**/*.spec.js"
   },
   "dependencies": {
+    "@fastify/cors": "^8.1.0",
     "axios": "0.21.0",
     "currency-symbol-map": "^5.1.0",
     "fastify": "4.1.0",
